@@ -4,3 +4,6 @@
 *.o
 tools/gftool
 tools/gentab
+build/
+CMakeFiles/
+CMakeCache.txt

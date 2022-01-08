@@ -17,7 +17,13 @@
 #ifndef DHARA_JOURNAL_H_
 #define DHARA_JOURNAL_H_
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include <stdint.h>
+
 #include "nand.h"
 
 /* Number of bytes used by the journal checkpoint header. */
@@ -252,5 +258,9 @@ static inline int dhara_journal_in_recovery(const struct dhara_journal *j)
 }
 
 dhara_page_t dhara_journal_next_recoverable(struct dhara_journal *j);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

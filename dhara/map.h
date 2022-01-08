@@ -17,6 +17,12 @@
 #ifndef DHARA_MAP_H_
 #define DHARA_MAP_H_
 
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include "journal.h"
 
 /* The map is a journal indexing format. It maps virtual sectors to
@@ -110,5 +116,10 @@ int dhara_map_sync(struct dhara_map *m, dhara_error_t *err);
  * automatically and is interleaved with other operations.
  */
 int dhara_map_gc(struct dhara_map *m, dhara_error_t *err);
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

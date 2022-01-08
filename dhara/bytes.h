@@ -17,6 +17,11 @@
 #ifndef DHARA_BYTES_H_
 #define DHARA_BYTES_H_
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include <stdint.h>
 
 static inline uint16_t dhara_r16(const uint8_t *data)
@@ -46,5 +51,10 @@ static inline void dhara_w32(uint8_t *data, uint32_t v)
 	data[2] = v >> 16;
 	data[3] = v >> 24;
 }
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -17,6 +17,11 @@
 #ifndef DHARA_ERROR_H_
 #define DHARA_ERROR_H_
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 typedef enum {
 	DHARA_E_NONE = 0,
 	DHARA_E_BAD_BLOCK,
@@ -41,5 +46,9 @@ static inline void dhara_set_error(dhara_error_t *err, dhara_error_t v)
 	if (err)
 		*err = v;
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

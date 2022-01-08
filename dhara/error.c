@@ -14,8 +14,9 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <stddef.h>
 #include "error.h"
+
+#include <stddef.h>
 
 const char *dhara_strerror(dhara_error_t err)
 {

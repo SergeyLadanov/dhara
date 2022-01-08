@@ -17,8 +17,14 @@
 #ifndef DHARA_NAND_H_
 #define DHARA_NAND_H_
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include <stdint.h>
 #include <stddef.h>
+
 #include "error.h"
 
 /* Each page in a NAND device is indexed, starting at 0. It's required
@@ -101,5 +107,10 @@ int dhara_nand_read(const struct dhara_nand *n, dhara_page_t p,
 int dhara_nand_copy(const struct dhara_nand *n,
 		    dhara_page_t src, dhara_page_t dst,
 		    dhara_error_t *err);
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

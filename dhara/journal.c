@@ -14,8 +14,10 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#include <string.h>
 #include "journal.h"
+
+#include <string.h>
+
 #include "bytes.h"
 
 /************************************************************************
