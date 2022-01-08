@@ -12,6 +12,12 @@
 
 class NandExample : public DharaNandDriver
 {
+public:
+    NandExample(uint8_t Log2PageSize, uint8_t Log2Ppb, unsigned int NumBlocks)
+        : DharaNandDriver(Log2PageSize, Log2Ppb, NumBlocks)
+    {
+
+    }
 private:
     virtual int SectorIsBad(dhara_block_t bno) override;
     virtual void MarkBadSector(dhara_block_t bno) override;

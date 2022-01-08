@@ -17,15 +17,15 @@ add_executable(
     dhara/error.c
     dhara/journal.c
     dhara/map.c
-    dhara/APP_C/user_nandio.c
-    dhara/APP_CPP/nandio.cpp
+    dhara/APP/user_nandio.c
+    dhara/APP/nandio.cpp
 )
 
 # Директории с *.h файлами
 include_directories(
     Example/Inc
     dhara
-    dhara/APP_CPP
+    dhara/App
 )
 
 # Флаги компиляции

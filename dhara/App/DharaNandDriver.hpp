@@ -13,6 +13,13 @@
 class DharaNandDriver : public dhara_nand
 {
 public:
+    DharaNandDriver(uint8_t Log2PageSize, uint8_t Log2Ppb, unsigned int NumBlocks)
+    {
+        log2_page_size = Log2PageSize;
+        log2_ppb = Log2Ppb;
+        num_blocks = NumBlocks;
+    }
+
     virtual int SectorIsBad(dhara_block_t bno) = 0;
     virtual void MarkBadSector(dhara_block_t bno) = 0;
     virtual int EraseBlock(dhara_block_t bno, dhara_error_t *err = nullptr) = 0;
