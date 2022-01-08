@@ -13,7 +13,7 @@ extern "C"
 {
 #endif
 
-#define DHARA_USE_CPP_LAYER 0
+#define DHARA_USE_CPP_LAYER 1
 
 #include "map.h"
 #include "nand.h"

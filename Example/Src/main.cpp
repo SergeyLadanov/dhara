@@ -1,6 +1,7 @@
 
 #include "main.h"
-#include "dhara.h"
+#include "DharaFTL.hpp"
+#include "NandExample.hpp"
 #include <cstdio>
 
 #define NUM_SECTORS		200
@@ -9,6 +10,10 @@
 
 char write_buf[128] = "Hello world!!!";
 char read_buf[128];
+
+
+
+
 
 // Основная программа
 int main(void)

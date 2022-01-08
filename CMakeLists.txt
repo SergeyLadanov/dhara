@@ -13,16 +13,19 @@ enable_language(CXX C)
 add_executable(
     ${EXECUTABLE} 
     Example/Src/main.cpp
+    Example/Src/NandExample.cpp
     dhara/error.c
     dhara/journal.c
     dhara/map.c
     dhara/APP_C/user_nandio.c
+    dhara/APP_CPP/nandio.cpp
 )
 
 # Директории с *.h файлами
 include_directories(
     Example/Inc
     dhara
+    dhara/APP_CPP
 )
 
 # Флаги компиляции
