@@ -48,6 +48,11 @@ public:
         return dhara_map_blocksize(&Map);
     }
 
+    inline uint32_t GetBlockNum(void)
+    {
+        return dhara_map_capacity(&Map);
+    }
+
     inline int ReadBlocks(uint8_t *buf, uint32_t blk_addr, uint32_t blk_len)
     {
         return dhara_read_blocks(&Map, buf, blk_addr, blk_len);
