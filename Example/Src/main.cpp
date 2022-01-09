@@ -33,7 +33,7 @@ int main(void)
     printf("Memory size: %d\n", Map.GetMemSize());
     printf("\n");
 
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 5; i++)
     {
         if (Map.Write(0, (const uint8_t *) write_buf, &err) < 0)
             printf("Write aborted!\r\n");

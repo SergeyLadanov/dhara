@@ -18,7 +18,7 @@ add_executable(
     dhara/journal.c
     dhara/map.c
     dhara/APP/user_nandio.c
-    dhara/APP/nandio.cpp
+    dhara/APP/dhara_nandio.cpp
 )
 
 # Директории с *.h файлами
