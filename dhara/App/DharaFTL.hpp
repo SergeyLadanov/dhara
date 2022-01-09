@@ -11,7 +11,7 @@
 #include "dhara.h"
 #include "DharaNandDriver.hpp"
 
-class Dhara_FTL
+class DharaFTL
 {
 private:
     struct dhara_map Map;

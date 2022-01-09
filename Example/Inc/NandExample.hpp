@@ -13,12 +13,20 @@
 class NandExample : public DharaNandDriver
 {
 public:
+    static constexpr uint32_t SECTORS_NUMBER = 32;
+private:
+    static constexpr uint32_t ERASE_SECTOR_SIZE = 4096;
+    // Emulating memory space
+    static uint8_t Pages[ERASE_SECTOR_SIZE * SECTORS_NUMBER];    
+public:
+
     NandExample(uint8_t Log2PageSize, uint8_t Log2Ppb, unsigned int NumBlocks)
         : DharaNandDriver(Log2PageSize, Log2Ppb, NumBlocks)
     {
 
     }
 private:
+    // Nand IO methods
     virtual int SectorIsBad(dhara_block_t bno) override;
     virtual void MarkBadSector(dhara_block_t bno) override;
     virtual int EraseBlock(dhara_block_t bno, dhara_error_t *err = nullptr) override;
